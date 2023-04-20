@@ -28,10 +28,15 @@
         </p>
         <?php 
       
-            $sql = "SELECT * FROM user";
+          /*   $sql = "SELECT * FROM user";
             $result = $database->query($sql);
             $user_faund = mysqli_fetch_array($result);
-            var_dump($user_faund);
+            var_dump($user_faund); */
+            $user = new User;
+           $result_set = $user->find_all_users();
+           while ($rov = mysqli_fetch_array($result_set)) {
+            echo $rov['username'] . "</br>";           }
+
         ?>
         <ol class="breadcrumb">
             <li>
