@@ -21,6 +21,19 @@
             Users
             <small>Subheading</small>
         </h1>
+    <p style="color: red">
+        <?php if($database->connection){
+            echo "true";
+        }else{
+        echo "nesto drugo";
+        }?>
+        </p>
+        <?php 
+            $sql = "SELECT * FROM users";
+            $result = $database->query($sql);
+            $user_faund = mysqli_fetch_array($result);
+            var_dump($user_faund);
+        ?>
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
