@@ -24,12 +24,11 @@
     <p style="color: red">
         <?php if($database->connection){
             echo "true";
-        }else{
-        echo "nesto drugo";
         }?>
         </p>
         <?php 
-            $sql = "SELECT * FROM users";
+      
+            $sql = "SELECT * FROM user";
             $result = $database->query($sql);
             $user_faund = mysqli_fetch_array($result);
             var_dump($user_faund);
