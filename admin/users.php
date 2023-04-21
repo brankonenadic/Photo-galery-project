@@ -40,11 +40,12 @@
             echo $user_id['last_name'] ;  */
             
          
-            $users = User::find_all_users();
+           /*  $users = User::find_all_users();
             foreach ($users as $user) {
-                echo $user->username . "<br>";
-            }
-
+                echo $user->last_name . "<br>";
+            } */
+            $users = User::find_user_by_id(1);
+            echo $users->last_name;
         ?>
         <ol class="breadcrumb">
             <li>
