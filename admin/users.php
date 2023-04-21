@@ -35,9 +35,15 @@
          /*  
            $result_set = User::find_all_users();
            while ($rov = mysqli_fetch_array($result_set)) {
-            echo $rov['username'] . "</br>";           } */
+            echo $rov['username'] . "</br>";           } 
             $user_id = User::find_user_by_id(1);
-            echo $user_id['last_name'] ;           
+            echo $user_id['last_name'] ;  */
+            
+         
+            $users = User::find_all_users();
+            foreach ($users as $user) {
+                echo $user->username . "<br>";
+            }
 
         ?>
         <ol class="breadcrumb">
