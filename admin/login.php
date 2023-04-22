@@ -1,27 +1,32 @@
-<?php require_once("includes/init.php"); ?>
+<?php require_once("includes/header.php"); ?>
 <?php
 
 if ($session->is_signed_in()) {
     redirect("index.php");
 }
 
+
 if (isset($_POST['submit'])) {
+  
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
-
+    
         $user_found = User::verify_user($username , $password);
-
+    ;
     if ($user_found) {
         $session->login($user_found);
         redirect("index.php");
     } else {
         $the_message = "Username or password are inncorect!!!";
     }
-
+    
 } else {
-
+    
         $username = "";
         $password = "";
+        $the_message = "";
+       
+       
 }
 ?>
 
@@ -30,7 +35,7 @@ if (isset($_POST['submit'])) {
     <form id="login-id" action="" method="post">	
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" class="form-control" name="username" value="<?php echo htmlentities($username); ?>" >
+            <input type="text" class="form-control" name="username"  value="<?php echo htmlentities($username); ?>" >
         </div>
         <div class="form-group">
             <label for="password">Password</label>

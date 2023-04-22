@@ -21,11 +21,7 @@
             Users
             <small>Subheading</small>
         </h1>
-    <p style="color: red">
-        <?php if($database->connection){
-            echo "true";
-        }?>
-        </p>
+   
         <?php 
       
           /*   $sql = "SELECT * FROM user";
@@ -43,9 +39,12 @@
            /*  $users = User::find_all_users();
             foreach ($users as $user) {
                 echo $user->last_name . "<br>";
-            } */
+            } 
             $users = User::find_user_by_id(1);
             echo $users->last_name;
+            */
+            print_r($_SESSION);
+         
         ?>
         <ol class="breadcrumb">
             <li>
