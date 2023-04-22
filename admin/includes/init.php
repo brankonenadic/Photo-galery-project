@@ -1,9 +1,9 @@
 <?php
-include("functions.php");
-include("new_confing.php");
-include("database.php");
-include("user.php");
-include("session.php");
+require_once("functions.php");
+require_once("new_confing.php");
+require_once("database.php");
+require_once("user.php");
+require_once("session.php");
 
 
 

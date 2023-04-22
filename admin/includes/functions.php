@@ -7,6 +7,10 @@ function clasAutoLoader($class){
       include($the_path);
     } 
 }
+
+function redirect($location){
+  header("Location: {$location}");
+}
 spl_autoload_register('clasAutoLoader');
 ?>
  
