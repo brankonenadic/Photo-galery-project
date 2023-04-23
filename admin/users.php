@@ -24,27 +24,22 @@
    
         <?php 
       
-          /*   $sql = "SELECT * FROM user";
-            $result = $database->query($sql);
-            $user_faund = mysqli_fetch_array($result);
-            var_dump($user_faund); */
-         /*  
-           $result_set = User::find_all_users();
-           while ($rov = mysqli_fetch_array($result_set)) {
-            echo $rov['username'] . "</br>";           } 
-            $user_id = User::find_user_by_id(1);
-            echo $user_id['last_name'] ;  */
-            
          
-           /*  $users = User::find_all_users();
-            foreach ($users as $user) {
-                echo $user->last_name . "<br>";
-            } 
-            $users = User::find_user_by_id(1);
-            echo $users->last_name;
-            */
-            print_r($_SESSION);
-         
+           /*  print_r($_SESSION); */
+
+    /*        $user = new User;
+           $user->username = "Munjara";
+           $user->password = "4321";
+           $user->first_name = "Merima";
+           $user->last_name = "Sladic";
+           $user->create(); */
+/* 
+           $user = User::find_user_by_id(2);
+           $user->username = "Joka";
+           $user->update();
+ */
+           /*  $user = User::find_user_by_id(4);
+            $user->delete(); */
         ?>
         <ol class="breadcrumb">
             <li>

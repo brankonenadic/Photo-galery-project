@@ -61,16 +61,31 @@ class User{
     public function create(){
         global $database;
 
-        $sql = "INSERT INTO users (username, password, first_name, last_name) VALUES (' $database->escape_string($this->username) , $database->escape_string($this->password) , $database->escape_string($this->first_name) , $database->escape_string($this->last_name) ')";
+        $sql = "INSERT INTO user (username, password, first_name, last_name) VALUES ('" . $database->escape_string($this->username) ."' , '" .  $database->escape_string($this->password) . "' , '" . $database->escape_string($this->first_name) . "' , '" . $database->escape_string($this->last_name) . "')";
 
         if ($database->query($sql)) {
+            $this->id = $database->the_insert_id();
             return true;
         } else {
             return false;
         }
 
     }
+    public function update(){
+        global $database;
 
+        $sql = "UPDATE user SET username = '" . $database->escape_string($this->username) . "' , password = '" . $database->escape_string($this->password) . "' , first_name = '" . $database->escape_string($this->first_name) . "' , last_name = '" . $database->escape_string($this->last_name) . "' WHERE id = ". $database->escape_string($this->id) . "";
+        $database->query($sql);
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+
+    }
+    public function delete(){
+        global $database;
+        $sql = "DELETE FROM user WHERE id = ". $database->escape_string($this->id) . " LIMIT 1";
+        $database->query($sql);
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+
+    }
 
 } // end User class
 
