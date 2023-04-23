@@ -44,12 +44,7 @@ class User{
 
     public static function instantion($find){
         $the_object = new self;
-     /*    $the_object->id = $find['id'];
-        $the_object->username = $find['username'];
-        $the_object->password = $find['password'];
-        $the_object->first_name = $find['first_name'];
-        $the_object->last_name = $find['last_name']; */
-    
+  
         foreach ($find as $the_attribute => $value) {
             if ($the_object->has_the_attribute($the_attribute)) {
                 $the_object->$the_attribute = $value;
@@ -62,7 +57,22 @@ class User{
         $object_property = get_object_vars($this);
        return array_key_exists($the_attribute, $object_property);
     }
-}
+
+    public function create(){
+        global $database;
+
+        $sql = "INSERT INTO users (username, password, first_name, last_name) VALUES (' $database->escape_string($this->username) , $database->escape_string($this->password) , $database->escape_string($this->first_name) , $database->escape_string($this->last_name) ')";
+
+        if ($database->query($sql)) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
+} // end User class
 
 
 
