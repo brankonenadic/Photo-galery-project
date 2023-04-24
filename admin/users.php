@@ -27,12 +27,12 @@
          
            /*  print_r($_SESSION); */
 
-    /*        $user = new User;
+           /* $user = new User;
            $user->username = "Munjara";
            $user->password = "4321";
            $user->first_name = "Merima";
            $user->last_name = "Sladic";
-           $user->create(); */
+           $user->create(); */ 
 
         /*    $user = User::find_user_by_id(5);
            $user->password = "4444";

@@ -69,7 +69,7 @@ class User{
     public function create(){
         global $database;
 
-        $sql = "INSERT INTO user (username, password, first_name, last_name) VALUES ('" . $database->escape_string($this->username) ."' , '" .  $database->escape_string($this->password) . "' , '" . $database->escape_string($this->first_name) . "' , '" . $database->escape_string($this->last_name) . "')";
+        $sql = "INSERT INTO ". self::$db_table ." (username, password, first_name, last_name) VALUES ('" . $database->escape_string($this->username) ."' , '" .  $database->escape_string($this->password) . "' , '" . $database->escape_string($this->first_name) . "' , '" . $database->escape_string($this->last_name) . "')";
 
         if ($database->query($sql)) {
             $this->id = $database->the_insert_id();
