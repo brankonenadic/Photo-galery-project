@@ -57,7 +57,14 @@ class User{
         $object_property = get_object_vars($this);
        return array_key_exists($the_attribute, $object_property);
     }
+    
+    public function save(){
+        global $database;
 
+        return isset($this->id) ? $this->update() : $this->create(); 
+
+
+    }
     public function create(){
         global $database;
 
@@ -86,6 +93,8 @@ class User{
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 
     }
+
+
 
 } // end User class
 

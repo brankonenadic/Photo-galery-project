@@ -38,8 +38,20 @@
            $user->username = "Joka";
            $user->update();
  */
-           /*  $user = User::find_user_by_id(4);
+         /*    $user = User::find_user_by_id(7);
             $user->delete(); */
+
+     /*        $user = User::find_user_by_id(5);
+            $user->username = "Nova Munjara";
+            $user->save(); */
+/* 
+            $user = new User;
+            $user->password = "123";
+            $user->save();  */
+
+ /*  $user = User::find_user_by_id(6);
+  $user->password = "123";
+            $user->save(); */
         ?>
         <ol class="breadcrumb">
             <li>
