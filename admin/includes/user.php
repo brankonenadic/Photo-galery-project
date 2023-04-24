@@ -2,6 +2,7 @@
 
 class User{
 
+    protected static $db_table = "user";
     public $id;
     public $username;
     public $password;
@@ -81,14 +82,14 @@ class User{
     public function update(){
         global $database;
 
-        $sql = "UPDATE user SET username = '" . $database->escape_string($this->username) . "' , password = '" . $database->escape_string($this->password) . "' , first_name = '" . $database->escape_string($this->first_name) . "' , last_name = '" . $database->escape_string($this->last_name) . "' WHERE id = ". $database->escape_string($this->id) . "";
+        $sql = "UPDATE ". self::$db_table ." SET username = '" . $database->escape_string($this->username) . "' , password = '" . $database->escape_string($this->password) . "' , first_name = '" . $database->escape_string($this->first_name) . "' , last_name = '" . $database->escape_string($this->last_name) . "' WHERE id = ". $database->escape_string($this->id) . "";
         $database->query($sql);
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 
     }
     public function delete(){
         global $database;
-        $sql = "DELETE FROM user WHERE id = ". $database->escape_string($this->id) . " LIMIT 1";
+        $sql = "DELETE FROM ". self::$db_table ." WHERE id = ". $database->escape_string($this->id) . " LIMIT 1";
         $database->query($sql);
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 

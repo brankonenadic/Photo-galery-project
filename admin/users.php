@@ -33,12 +33,12 @@
            $user->first_name = "Merima";
            $user->last_name = "Sladic";
            $user->create(); */
-/* 
-           $user = User::find_user_by_id(2);
-           $user->username = "Joka";
+
+        /*    $user = User::find_user_by_id(5);
+           $user->password = "4444";
            $user->update();
  */
-         /*    $user = User::find_user_by_id(7);
+          /*   $user = User::find_user_by_id(6);
             $user->delete(); */
 
      /*        $user = User::find_user_by_id(5);
