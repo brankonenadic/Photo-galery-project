@@ -93,8 +93,14 @@ class User{
     } 
     public function update(){
         global $database;
-
-        $sql = "UPDATE ". self::$db_table ." SET username = '" . $database->escape_string($this->username) . "' , password = '" . $database->escape_string($this->password) . "' , first_name = '" . $database->escape_string($this->first_name) . "' , last_name = '" . $database->escape_string($this->last_name) . "' WHERE id = ". $database->escape_string($this->id) . "";
+        $properties = $this->properties();
+        $properties_pairs = array();
+        foreach ($properties as $key => $value) {
+            $properties_pairs[] = "{$key}='{$value}'";
+        }
+        $sql = "UPDATE ". self::$db_table ." SET ";
+        $sql .= implode(", ", $properties_pairs);
+        $sql .= " WHERE id=" . $database->escape_string($this->id);
         $database->query($sql);
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
 

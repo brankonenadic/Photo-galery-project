@@ -34,10 +34,13 @@
            $user->last_name = "Sladic2";
            $user->create(); */ 
 
-        /*    $user = User::find_user_by_id(5);
+          /*  $user = User::find_user_by_id(10);
+           $user->username = "Huso1";
            $user->password = "4444";
-           $user->update();
- */
+           $user->first_name = "Husein";
+           $user->last_name = "Booss";
+           $user->update(); */
+
           /*   $user = User::find_user_by_id(6);
             $user->delete(); */
 
