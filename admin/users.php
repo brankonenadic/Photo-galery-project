@@ -27,10 +27,10 @@
          
            /*  print_r($_SESSION); */
 
-           /* $user = new User;
-           $user->username = "Munjara2";
+         /*   $user = new User;
+           $user->username = "Selmica";
            $user->password = "4321";
-           $user->first_name = "Merima2";
+           $user->first_name = "Selma";
            $user->last_name = "Sladic2";
            $user->create(); */ 
 
