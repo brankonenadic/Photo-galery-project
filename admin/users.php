@@ -28,10 +28,10 @@
            /*  print_r($_SESSION); */
 
            /* $user = new User;
-           $user->username = "Munjara";
+           $user->username = "Munjara2";
            $user->password = "4321";
-           $user->first_name = "Merima";
-           $user->last_name = "Sladic";
+           $user->first_name = "Merima2";
+           $user->last_name = "Sladic2";
            $user->create(); */ 
 
         /*    $user = User::find_user_by_id(5);
