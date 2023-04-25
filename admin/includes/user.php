@@ -59,6 +59,11 @@ class User{
        return array_key_exists($the_attribute, $object_property);
     }
     
+    protected function properties(){
+        return get_object_vars($this);
+
+    }
+
     public function save(){
         global $database;
 
@@ -68,8 +73,9 @@ class User{
     }
     public function create(){
         global $database;
-
-        $sql = "INSERT INTO ". self::$db_table ." (username, password, first_name, last_name) VALUES ('" . $database->escape_string($this->username) ."' , '" .  $database->escape_string($this->password) . "' , '" . $database->escape_string($this->first_name) . "' , '" . $database->escape_string($this->last_name) . "')";
+        $properties = $this->properties();
+        $sql = "INSERT INTO " . self::$db_table . "(" . implode(",",array_keys($properties)) . ")" ;
+        $sql .= "VALUES ('" . implode(",",array_values($properties)) . "')";
 
         if ($database->query($sql)) {
             $this->id = $database->the_insert_id();
@@ -78,7 +84,7 @@ class User{
             return false;
         }
 
-    }
+    } 
     public function update(){
         global $database;
 
