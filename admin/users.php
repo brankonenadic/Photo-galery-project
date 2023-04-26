@@ -23,7 +23,7 @@
         </h1>
    
         <?php 
-      
+                
          
            /*  print_r($_SESSION); */
 
@@ -34,17 +34,17 @@
            $user->last_name = "Sladic2";
            $user->create(); */ 
 
-          /*  $user = User::find_user_by_id(10);
+          /*  $user = User::find_by_id(10);
            $user->username = "Huso1";
            $user->password = "4444";
            $user->first_name = "Husein";
            $user->last_name = "Booss";
            $user->update(); */
 
-          /*   $user = User::find_user_by_id(6);
+          /*   $user = User::find_by_id(6);
             $user->delete(); */
 
-     /*        $user = User::find_user_by_id(5);
+     /*        $user = User::find_by_id(5);
             $user->username = "Nova Munjara";
             $user->save(); */
 /* 
@@ -52,7 +52,7 @@
             $user->password = "123";
             $user->save();  */
 
- /*  $user = User::find_user_by_id(6);
+ /*  $user = User::find_by_id(6);
   $user->password = "123";
             $user->save(); */
         ?>
