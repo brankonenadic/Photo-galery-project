@@ -56,10 +56,10 @@
   $user->password = "123";
             $user->save(); */
 
-           /*  $users = User::find_all();
+            $users = User::find_all();
             foreach ($users as $user) {
                echo $user->username . "<br>" ;
-            } */
+            }
 
 
 

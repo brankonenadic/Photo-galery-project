@@ -9,7 +9,7 @@ class User extends Db_objext {
     public $password;
     public $first_name;
     public $last_name;
-  
+
     
     public static function verify_user($username , $password){
         global $database;
