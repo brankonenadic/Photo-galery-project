@@ -56,12 +56,23 @@
   $user->password = "123";
             $user->save(); */
 
-            $users = User::find_all();
+           /*  $users = User::find_all();
             foreach ($users as $user) {
                echo $user->username . "<br>" ;
-            }
+            } */
 
+            /* $photos = Photo::find_all();
+            foreach ($photos as $photo) {
+               echo ->title . "<br>" ;
+            } */
 
+         /*   $photo = new Photo;
+           $photo->title = "Very nice photo";
+           $photo->discription = "Photo from nice town";
+           $photo->filename = "pic";
+           $photo->type = "image";
+           $photo->size = "1800";
+           $photo->create(); */
 
         ?>
         <ol class="breadcrumb">
