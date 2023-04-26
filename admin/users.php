@@ -27,18 +27,18 @@
          
            /*  print_r($_SESSION); */
 
-         /*   $user = new User;
-           $user->username = "Selmica";
+          /*  $user = new User;
+           $user->username = "Huse";
            $user->password = "4321";
-           $user->first_name = "Selma";
-           $user->last_name = "Sladic2";
-           $user->create(); */ 
-
-          /*  $user = User::find_by_id(10);
-           $user->username = "Huso1";
-           $user->password = "4444";
            $user->first_name = "Husein";
            $user->last_name = "Booss";
+           $user->create(); */ 
+
+           /* $user = User::find_by_id(10);
+           $user->username = "Uber";
+           $user->password = "1111";
+           $user->first_name = "Huber";
+           $user->last_name = "Biber";
            $user->update(); */
 
           /*   $user = User::find_by_id(6);
@@ -56,10 +56,10 @@
   $user->password = "123";
             $user->save(); */
 
-            $users = User::find_all();
+           /*  $users = User::find_all();
             foreach ($users as $user) {
                echo $user->username . "<br>" ;
-            }
+            } */
 
 
 
