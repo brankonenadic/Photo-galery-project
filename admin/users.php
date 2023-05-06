@@ -73,7 +73,7 @@
            $photo->type = "image";
            $photo->size = "1800";
            $photo->create(); */
-
+            
         ?>
         <ol class="breadcrumb">
             <li>
