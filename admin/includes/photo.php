@@ -3,11 +3,13 @@
 class Photo extends Db_objext {
 
     protected static $db_table = "photos";
-    protected static $db_table_fields = array('title' , 'discription' , 'filename' ,'type' , 'size');
+    protected static $db_table_fields = array('title' , 'description' , 'caption' , 'filename' , 'alternate_text' ,'type' , 'size');
     public $id;
     public $title;
-    public $discription;
+    public $description;
+    public $caption;
     public $filename;
+    public $alternate_text;
     public $type;
     public $size;
     public $temp_path;
