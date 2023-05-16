@@ -1,5 +1,11 @@
-
-
+.admin-photo-tumbnail {
+  width: 200px;
+  border-radius: 5px;
+}
+.admin-user-tumbnail{
+  width: 70px;
+  border-radius: 2px;
+}
 .photo-info-box {
 
     border: 1px solid #e5e5e5;
