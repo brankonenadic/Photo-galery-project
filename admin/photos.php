@@ -55,7 +55,6 @@
                             if (count($comments) == 0) {
                                 $comment_number = "No comments yet";
                             } elseif(count($comments) == 1) {
-                        
                                 $comment_number = count($comments) . " comment";
                             } else {
                                 $comment_number = count($comments) . " comments";
