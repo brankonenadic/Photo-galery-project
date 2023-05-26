@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <h1 class="page-header">
                 Admin
-                <small>Subheading</small>
+                <small>Dashboard</small>
             </h1>
             <div class="row">
                         <div class="col-lg-3 col-md-6">
@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-green">
+                            <div class="panel panel-red">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-red">
+                            <div class="panel panel-green">
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
