@@ -23,11 +23,10 @@
         ]);
 
         var options = {
-          legend:'none',
-          pieSliceText: 'label',
           title: 'My Daily Activities',
-          backgrounColor: 'transparent'
-
+          is3D: true,
+          pieSliceText: 'label',
+          backgroundColor: 'transparent'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
