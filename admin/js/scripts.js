@@ -9,9 +9,6 @@ var image_name;
 var photo_id;
 
 
-
-
-
 $(".modal_thumbnails").click(function(){
 
 $("#set_user_image").prop('disabled', false);
@@ -43,15 +40,9 @@ success:function(data) {
 
 });
 
-
-
-
 });
 
-
-
 $("#set_user_image").click(function(){
-
 
 	$.ajax({
 
@@ -64,49 +55,27 @@ $("#set_user_image").click(function(){
 
 				$(".user_image_box a img").prop('src', data);
 
-
 				// location.reload(true);
-
 			}
-
 
 		}
 
-
-
-
-
 	});
-
-
-
-
-
 
 });
 
 
-
-
-
 /*************Edit Photo side bar************/
 
-
-
 $(".info-box-header").click(function(){
-
 
 $(".inside").slideToggle("fast");
 
 $("#toggle").toggleClass("glyphicon-menu-down glyphicon , glyphicon-menu-up glyphicon ");
 
-
-
 });
 
-
 /***********Delete Functio***********/
-
 
 $(".delete_link").click(function(){
 
@@ -115,11 +84,9 @@ return confirm("Are you sure you want to delete this item");
 });
 
 
-
-tinymce.init({selector:'textarea'});
+$('#summernote').summernote();
 
 });
-
 
 
 

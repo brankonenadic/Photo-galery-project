@@ -3,20 +3,12 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-	
-	<!-- WYSIWYG -->
-	
-	<script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-
-  <script src="js/dropzone.js"></script>
-	
-	<script src="js/scripts.js"></script>
-
-
-	<script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="js/dropzone.js"></script>
+	  <script src="js/scripts.js"></script>
+    <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
